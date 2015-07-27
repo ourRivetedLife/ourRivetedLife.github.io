@@ -95,7 +95,7 @@
                             Problems look mighty small from 150 miles up
                         </h3>
                     </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 24, 2014</p>
+                    <p class="post-meta">Posted by <a href="#">ourRivetedLife</a> on September 24, 2015</p>
                 </div>
                 <hr>
             </div>
@@ -146,14 +146,17 @@
 	<script src="js/instafeed.min.js"></script>
 	
 <script type="text/javascript">
-    var userFeed = new Instafeed({
-        get: 'user',
-        userId: 7364,
-        accessToken: '7364.467ede5.43bbdba17cbe41a9bac0af9c167eb96e'
-    });
-    userFeed.run();
-</script>
+  	var userFeed = new Instafeed({
+	 	get: 'user',
+		limit: 10,
+		resolution: "standard_resolution",
+	 	userId: 7364,
+	 	accessToken: '7364.467ede5.43bbdba17cbe41a9bac0af9c167eb96e',
+ 		template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /></a>'
+});
+	userFeed.run();
 
+</script>
 </body>
 
 </html>
