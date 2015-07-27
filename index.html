@@ -56,12 +56,6 @@
                     <li>
                         <a href="about.html">About</a>
                     </li>
-                    <li>
-                        <a href="post.html">Sample Post</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -87,6 +81,9 @@
 
     <!-- Main Content -->
     <div class="container">
+    
+    <div id="instafeed"></div>
+    
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-preview">
@@ -99,27 +96,6 @@
                         </h3>
                     </a>
                     <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 24, 2014</p>
-                </div>
-                <hr>
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">
-                            I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
-                        </h2>
-                    </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 18, 2014</p>
-                </div>
-                <hr>
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">
-                            Science has not yet mastered prophecy
-                        </h2>
-                        <h3 class="post-subtitle">
-                            We predict too much for the next year and yet far too little for the next ten.
-                        </h3>
-                    </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on August 24, 2014</p>
                 </div>
                 <hr>
             </div>
@@ -166,6 +142,27 @@
     <!-- Custom Theme JavaScript -->
     <script src="js/clean-blog.min.js"></script>
 
+    <!-- Instafeed JavaScript -->
+	<script src="js/instafeed.min.js"></script>
+	
+	<script type="text/javascript">
+    var feed = new Instafeed({
+        get: 'tagged',
+        tagName: 'summer',
+        clientId: '13b339de6f5a4c598a13a00f5e326c0e'
+    });
+    feed.run();
+</script>
+
+<script type="text/javascript">
+    var feed = new Instafeed({
+        get: 'tagged',
+        tagName: 'summer',
+        clientId: '13b339de6f5a4c598a13a00f5e326c0e',
+        template: '<a href="{{link}}"><img src="{{image}}" /></a>'
+    });
+    feed.run();
+</script>
 </body>
 
 </html>
